@@ -15,6 +15,12 @@
 </head>
 <body>
 <h1>Articles</h1>
+
+<p>Chaque offre devra être consultable sous forme d'une page individuelle 
+    en affichant les détails du véhicule.</p>
+
+
+
     <a href="http://localhost/php/mini-projet-auto-encheres//index.php">Accueil</a>
 </body>
 </html>

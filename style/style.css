@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
-  background-color: black;
 }
 * body {
   margin: 0;
+  height: 100vh;
 }
 
 nav {
@@ -11,7 +11,7 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   background-color: black;
-  height: 30px;
+  height: 50px;
 }
 nav a {
   cursor: pointer;
@@ -19,9 +19,36 @@ nav a {
   color: #FFF;
 }
 nav a:hover {
-  background-color: red;
+  font-size: 1.5em;
+  color: red;
 }
 nav img#logo {
   height: 100px;
   width: 100px;
+}
+
+.actusite {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  background-color: red;
+}
+
+.listAuto {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  background-color: cadetblue;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+}
+footer p {
+  cursor: pointer;
+  color: #FFF;
 }/*# sourceMappingURL=style.css.map */

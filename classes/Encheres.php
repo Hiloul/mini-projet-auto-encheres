@@ -10,7 +10,14 @@
     <title>Document</title>
 </head>
 <body>
+<nav>
+    <a href="/index.php"></a>
+</nav>
+
 <h1>Enchères</h1>
-  
+  <input type="submit" value="Déposer une enchère">
+
+
+
 </body>
 </html>
