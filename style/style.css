@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  background-color: black;
+}
+* body {
+  margin: 0;
 }
 
 nav {
@@ -14,9 +18,10 @@ nav a {
   text-decoration: none;
   color: #FFF;
 }
-nav a #logo {
-  width: 100px;
-}
 nav a:hover {
   background-color: red;
+}
+nav img#logo {
+  height: 100px;
+  width: 100px;
 }/*# sourceMappingURL=style.css.map */

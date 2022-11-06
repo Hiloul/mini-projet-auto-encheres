@@ -1,4 +1,9 @@
+
 *{box-sizing: border-box;
+    background-color: black;
+    body{
+        margin:0;
+    }
 }
 
 nav{
@@ -11,12 +16,14 @@ nav{
         cursor: pointer;
         text-decoration: none;
         color: #FFF;
-        #logo{
-        width: 100px;}
+        
         &:hover{
             background-color: red;
         }
     }
-}
+    img#logo{
+        height: 100px;
+        width: 100px;}
 
+}    
 
