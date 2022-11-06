@@ -11,6 +11,8 @@ nav{
         cursor: pointer;
         text-decoration: none;
         color: #FFF;
+        #logo{
+        width: 100px;}
         &:hover{
             background-color: red;
         }
