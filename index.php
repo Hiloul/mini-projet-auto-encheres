@@ -14,9 +14,9 @@
 </head>
 <body>
 <nav>
-<a href="">Enchères</a>
-<a href="">Articles</a>
-<a href="">Vendre</a>
+<a href="classes/Encheres.php">Enchères</a>
+<a href="classes/Articles.php">Articles</a>
+<a href="classes/Ventes.php">Vendre</a>
 </nav>    
 
 
