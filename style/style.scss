@@ -1,0 +1,20 @@
+*{box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    height: 30px;
+    a{
+        cursor: pointer;
+        text-decoration: none;
+        color: #FFF;
+        &:hover{
+            background-color: red;
+        }
+    }
+}
+
+
