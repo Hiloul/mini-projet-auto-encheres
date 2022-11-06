@@ -30,14 +30,14 @@ nav img#logo {
 .actusite {
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  height: 100vh;
   background-color: red;
 }
 
 .listAuto {
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  height: 100vh;
   background-color: cadetblue;
 }
 

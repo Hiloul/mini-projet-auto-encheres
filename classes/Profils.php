@@ -3,7 +3,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +13,20 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Articles</h1>
+<h1>Profils</h1>
 
-<p>Chaque offre devra être consultable sous forme d'une page individuelle 
-    en affichant les détails du véhicule.</p>
+<form id="inscription" action="" method="post">
+<input type="text" id="lastname" name="lastname">
+<input type="text" id="firstname" name="firstname">
+<input type="email" id="email" name="email">
+<input type="password" id="passord" name="password">
+</form>
+
+<form action="" id="login" method="post">
+<input type="email">
+<input type="password">
+
+</form>
 
 
 
