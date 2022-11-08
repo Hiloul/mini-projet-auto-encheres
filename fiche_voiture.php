@@ -17,12 +17,14 @@ foreach($annonce as $key => $value){?>
 <div id="foreach">
 
 <?php
-    echo $value['marque']." ".$value['model']." ".$value['annee'].'<section><a href="/php/mini-projet-auto-encheres/fiche_voiture.php?id='.$value["id"].'">Afficher</a> <a href="supprimer_annonce.php?id='.$value["id"].'">Supprimer</a><br></section>';
+    echo $value['marque']."   ".$value['model']."   ".$value['annee']
+    ."   ".$value['couleur']."   ".$value['kilometrage']."   ".$value['carburant']
+    ."   ".$value['boitevitesse']."   ".$value['prixdepart']
+    ."€  ".$value['datedebut']."   ".$value['datefin']."   ".$value['description'];
 }
 ?>
-<div class="btn">
-<button><a href="ajouter_annonce.php">Deposer une annonce</a></button>
-</div>
+
+
 </div>
 
 

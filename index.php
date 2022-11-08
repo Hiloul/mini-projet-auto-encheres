@@ -22,11 +22,35 @@
 
 
 <section class="actusite">
-<h2>Dernières Actualités</h2>
-<p>Chaque visiteur devra pouvoir déposer une annonce de voiture en saisissant 
-    le prix de réserve (prix de départ des enchères), la date de de fin des 
-    enchères et les informations essentielles: modèle, marque, puissance, année, description, etc...
-</p>
+
+<h1>Enchères du moment</h1>
+
+  
+<?php
+require __DIR__."/pdo.php";
+
+//Recuperer toutes les annonces
+$query = $pdo->prepare("SELECT * FROM annonces");
+$query->execute();
+//recupere les données converti dans un tableau associatif
+$annonce= $query->fetchALL(PDO::FETCH_ASSOC);
+
+foreach($annonce as $key => $value){?>
+
+<div id="foreach">
+<div id="accueil">
+<?php
+    echo $value['marque']." ".$value['model']." ".$value['annee']." ".$value['prixdepart'].'€';
+}
+?>
+</div>
+</div>
+
+
+
+
+
+
 </section>
 
 

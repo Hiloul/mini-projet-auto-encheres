@@ -37,7 +37,6 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   margin: 0;
   background-color: red;
 }
@@ -96,6 +95,8 @@ footer p {
 }
 
 input {
+  border-radius: 10px;
+  padding: 2px;
   transform: translateY(-30%);
 }
 input input::-webkit-outer-spin-button,
@@ -104,6 +105,7 @@ input input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-label {
-  transform: translateY(-30%);
+#accueil {
+  font-size: xx-large;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

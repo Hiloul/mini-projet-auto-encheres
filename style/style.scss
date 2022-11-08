@@ -38,7 +38,7 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    
     margin: 0;
 
     background-color: red;}
@@ -112,10 +112,19 @@ footer{
 }
 
 
-input{transform: translateY(-30%);
+input{
+    border-radius: 10px;
+    padding: 2px;
+    
+    transform: translateY(-30%);
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }}
-label{transform: translateY(-30%); }
+
+
+#accueil{
+    font-size: xx-large;
+    font-weight: 600;
+}

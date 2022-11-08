@@ -43,7 +43,7 @@ if(isset($_POST["submitUser"])) {
     <?php
     if (isset($_POST["submitUser"])) {
         if ($resultat) {
-            header('Location: index.php');
+            header('Location: page_connexion.php');
         } else {
             echo "Erreur lors de l'ajout";
         }
