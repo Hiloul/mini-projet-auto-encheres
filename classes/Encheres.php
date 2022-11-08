@@ -17,7 +17,7 @@
 <form action="Encheres.php" method="post">
         <p>
             <label for="offre">offre</label>
-            <input type="text" name="offre" id="offre">
+            <input type="number" name="offre" id="offre">
         </p>
         <p>
             <label for="date">date</label>
@@ -28,7 +28,7 @@
         <p>
             <label for="utiliateur">utilisateur</label>
             <select name="utilisateur" id="utilisateur">
-                <?php foreach ($utilisateur as $key => $value) { ?>
+                <?php foreach ($annonce as $key => $value) { ?>
                     <option value="<?= $value["id"] ?>"><?= $value["nom"] . " " . $value["prenom"] ?></option>
                 <?php } ?>
 
@@ -39,7 +39,7 @@
 
     </form>
     <?php if (isset($_POST["submitEncheres"])) {
-        if ($utilisateur) {
+        if ($annonce) {
             echo "aannonce ajouter";
         } else {
             echo "erreur l'ors de l'ajout";
