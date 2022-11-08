@@ -71,15 +71,6 @@ nav img#logo {
   color: black;
 }
 
-form.addutilisateur {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 50vh;
-  background-color: aqua;
-}
-
 footer {
   display: flex;
   justify-content: space-evenly;
@@ -90,4 +81,13 @@ footer {
 footer p {
   cursor: pointer;
   color: #FFF;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  background-color: aqua;
 }/*# sourceMappingURL=style.css.map */
