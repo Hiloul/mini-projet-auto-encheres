@@ -20,6 +20,7 @@
 <input type="text" id="firstname" name="firstname">
 <input type="email" id="email" name="email">
 <input type="password" id="passord" name="password">
+<input type="submit" value="Valider" name="submitInscription">
 </form>
 
 <form action="" id="login" method="post">
