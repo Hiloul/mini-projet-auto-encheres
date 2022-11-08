@@ -29,6 +29,14 @@ nav{
 
 }    
 
+form{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    background-color: red;}
+
 .actusite{
     display: flex;
     flex-direction: column;
@@ -90,11 +98,4 @@ footer{
     }
 }
 
-form{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 50vh;
-    background-color: red;}
 

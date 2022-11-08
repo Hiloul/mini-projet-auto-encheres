@@ -26,6 +26,15 @@ nav img#logo {
   width: 100px;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  background-color: red;
+}
+
 .actusite {
   display: flex;
   flex-direction: column;
@@ -80,13 +89,4 @@ footer {
 footer p {
   cursor: pointer;
   color: #FFF;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 50vh;
-  background-color: red;
 }/*# sourceMappingURL=style.css.map */
