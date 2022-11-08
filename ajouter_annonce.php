@@ -38,60 +38,60 @@ if (isset($_POST["submitAnnonce"])) {
 <h1>Deposer une annonce</h1>
     <form action="ajouter_annonce.php" method="post">
         <p>
-            <label for="model">model</label>
+            <label for="model">Model: </label>
             <input type="text" name="model" id="model">
         </p>
         <p>
-            <label for="marque">marque</label>
+            <label for="marque">Marque: </label>
             <input type="text" name="marque" id="marque">
         </p>
 
         <p>
-            <label for="Couleur">Couleur</label>
+            <label for="Couleur">Couleur: </label>
             <input type="text" name="Couleur" id="Couleur">
         </p>
 
         <p>
-            <label for="annee">annee</label>
+            <label for="annee">Année: </label>
             <input type="number" name="annee" id="annee">
         </p>
 
         <p>
-            <label for="kilomatrage">kilometrage</label>
+            <label for="kilomatrage">Kilometrage: </label>
             <input type="number" name="kilometrage" id="kilometrage">
         </p>
 
         <p>
-            <label for="carburant">carburant</label>
+            <label for="carburant">Carburant: </label>
             <input type="text" name="carburant" id="carburant">
         </p>
 
         <p>
-            <label for="boitevitesse">boitevitesse</label>
+            <label for="boitevitesse">Boîte de vitesse: </label>
             <input type="text" name="boitevitesse" id="boitevitesse">
         </p>
 
         <p>
-            <label for="prixdepart">prixdepart</label>
+            <label for="prixdepart">Mise à prix: </label>
             <input type="number" name="prixdepart" id="prixdepart">
         </p>
 
         <p>
-            <label for="description">description</label>
+            <label for="description">Description: </label>
             <input type="text" name="description" id="description">
         </p>
 
         <p>
-            <label for="datedebut">datedebut</label>
+            <label for="datedebut">Début de l'enchère: </label>
             <input type="date" name="datedebut" id="datedebut">
         </p>
 
         <p>
-            <label for="datefin">datefin</label>
+            <label for="datefin">Fin de l'enchère: </label>
             <input type="date" name="datefin" id="datefin">
         </p>
         <p>
-            <label for="utiliateur">utilisateur</label>
+            <label for="utiliateur">Vendeur/se: </label>
             <select name="utilisateur" id="utilisateur">
                 <?php foreach ($utilisateur as $key => $value) { ?>
                     <option value="<?= $value["id"] ?>"><?= $value["nom"] . " " . $value["prenom"] ?></option>

@@ -20,7 +20,8 @@ if(isset($_POST["submitUser"])) {
 
 <?php include('navbar.php'); ?> 
 
-<h1>Formulaire d'inscription</h1>
+<section class="bodysite">
+<h1>Créer son profil</h1>
 <form action="ajouter_utilisateur.php" method="post" >
         <p>
             <label for="nom">Nom</label>
@@ -40,6 +41,7 @@ if(isset($_POST["submitUser"])) {
         </p>
         <input type="submit" value="Ajouter" name="submitUser">
     </form>
+    </section>
     <?php
     if (isset($_POST["submitUser"])) {
         if ($resultat) {

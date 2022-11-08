@@ -11,9 +11,12 @@ $query->execute();
 //recupere les données converti dans un tableau associatif
 $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
 // var_dump($annonce);
+?>
+<h1>Sommaire des annonces</h1>
 
+<?php
 foreach($annonce as $key => $value){?>
-
+<section class="bodysite">
 <div id="foreach">
 
 <?php
@@ -23,11 +26,13 @@ foreach($annonce as $key => $value){?>
 <div class="btn">
 <button><a href="ajouter_annonce.php">Deposer une annonce</a></button>
 </div>
+
 </div>
-
-
-
-
+</section>
 <footer>
     <p>&copy;AutoEnchères</p>
 </footer>
+
+
+
+

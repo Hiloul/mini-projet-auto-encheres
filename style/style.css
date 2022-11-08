@@ -5,7 +5,8 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-family: "Dancing Script", cursive;
+  scroll-behavior: smooth;
+  font-family: "Bangers", cursive;
 }
 * body {
   margin: 0;
@@ -39,24 +40,20 @@ form {
   align-items: center;
   flex-direction: column;
   margin: 0;
-  background-color: red;
 }
 
 .actusite {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: red;
 }
 
 #foreach {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 50px;
   font-weight: 400;
-  height: 100vh;
-  background-color: red;
 }
 #foreach section {
   margin-top: 20px;
@@ -76,11 +73,15 @@ form {
 }
 .btn button a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .btn button a:hover {
   font-size: 1.5em;
-  color: black;
+  color: red;
+}
+
+.bodysite {
+  height: 100vh;
 }
 
 footer {
@@ -89,6 +90,7 @@ footer {
   align-items: center;
   background-color: black;
   height: 50px;
+  width: 100%;
 }
 footer p {
   cursor: pointer;
@@ -98,10 +100,11 @@ footer p {
 input {
   border-radius: 10px;
   padding: 2px;
-  transform: translateY(-30%);
+  border: none;
 }
-input input::-webkit-outer-spin-button,
-input input::-webkit-inner-spin-button {
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }

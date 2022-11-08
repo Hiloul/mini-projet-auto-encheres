@@ -24,7 +24,8 @@ if(isset($_POST["email"], $_POST["password"])) {
 
 <?php include('navbar.php'); ?> 
 
-
+<section class="bodysite">
+    <h1>S'identifier</h1>
 <form action="page_connexion.php" method="post">
         <p>
             <label for="email">Email</label>
@@ -37,6 +38,7 @@ if(isset($_POST["email"], $_POST["password"])) {
         <input type="submit" value="Se connecter">
 
     </form>
+    </section>
     <?php
     if (isset($_POST["email"], $_POST["password"])) {
         if ($annonce) {

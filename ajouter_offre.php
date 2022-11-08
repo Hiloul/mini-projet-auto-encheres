@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="style/style.css">
- 
-<a href="http://localhost/php/mini-projet-auto-encheres//index.php">Accueil</a>
-  
 
+ 
+<?php include('navbar.php'); ?> 
+<section class="bodysite">
 <h1>Enchères</h1>
 
-<form action="Encheres.php" method="post">
+<form action="ajouter_offre.php" method="post">
         <p>
             <label for="offre">Offre proposée: </label>
             <input type="number" name="offre" id="offre">
@@ -17,7 +17,7 @@
 
      
         <p>
-            <label for="utiliateur">utilisateur</label>
+            <label for="utiliateur">Annonces choisie: </label>
             <select name="utilisateur" id="utilisateur">
                 <?php foreach ($utilisateur as $key => $value) { ?>
                     <option value="<?= $value["id"] ?>"><?= $value["nom"] . " " . $value["prenom"] ?></option>
@@ -30,14 +30,14 @@
 
     </form>
     <?php if (isset($_POST["submitEncheres"])) {
-        if ($value) {
+        if ($utilisateur) {
             echo "aannonce ajouter";
         } else {
             echo "ERREUR !!!!!!";
         }
     } ?>
 
-
+</section>
 
 <footer>
     <p>&copy;AutoEnchères</p>

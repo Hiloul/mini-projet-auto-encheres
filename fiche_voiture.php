@@ -13,11 +13,14 @@ $query->execute();
 //recupere les données converti dans un tableau associatif
 $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
 // var_dump($annonce);
+?>
 
+<h1>Fiche détails des véhicules</h1>
+
+<?php
 foreach($annonce as $key => $value){?>
-
+<section class="bodysite">
 <div id="foreach">
-<h1>Fiche Détails</h1>
 <?php
     echo $value['marque']."   ".$value['model']."   ".$value['annee']
     ."   ".$value['couleur']."   ".$value['kilometrage']."   ".$value['carburant']
@@ -28,7 +31,7 @@ foreach($annonce as $key => $value){?>
 
 
 </div>
-
+</section>
 
 
 
