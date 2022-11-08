@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="style/style.css">
+<?php include('navbar.php'); ?> 
 <?php
 require __DIR__."/pdo.php";
 
@@ -60,6 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Bonjour <?php echo $loggedUser['email']; ?> et bienvenue sur le site !
     </div>
 <?php endif; ?>
+<footer>
+    <p>&copy;AutoEnchères</p>
+</footer>
 
 
 

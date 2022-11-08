@@ -15,3 +15,7 @@ $resultat = $query->execute();
 }   else{
     echo "erreur parametre id manquant dans l'url";
         }
+
+?>
+
+
