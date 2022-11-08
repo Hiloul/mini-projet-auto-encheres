@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="style/style.css">
 
+<h1>Fiche Détails</h1>
+
 <?php include('navbar.php'); ?> 
   
 <?php

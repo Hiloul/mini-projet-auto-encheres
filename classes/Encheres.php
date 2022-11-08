@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<?php include('navbar.php'); ?> 
   
 
 <h1>Enchères</h1>
@@ -46,5 +47,10 @@
         }
     } ?>
 
+
+
+<footer>
+    <p>&copy;AutoEnchères</p>
+</footer>
 </body>
 </html>
