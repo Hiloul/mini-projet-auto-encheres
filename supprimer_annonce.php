@@ -6,6 +6,7 @@ $query = $pdo->prepare("DELETE FROM `annonces` WHERE id=:id");
 $query->bindValue(':id', $_GET["id"], PDO::PARAM_INT);
 $resultat = $query->execute();
     if($resultat){
+        echo 'youhou tes sure?';
     header('Location: index.php');
 }   else{
     echo "erreur lors de la suppresion";
