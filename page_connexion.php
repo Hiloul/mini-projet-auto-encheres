@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style/style.css">
 <?php
 require __DIR__."/pdo.php";
 
@@ -30,8 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<?php include('navbar.php'); ?> 
+
 <?php if(!isset($loggedUser)): ?>
+    
+
 <form action="page_connexion.php" method="post">
     <?php if(isset($errorMessage)) : ?>
         <div class="alert alert-danger" role="alert">

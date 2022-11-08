@@ -1,4 +1,6 @@
+<link rel="stylesheet" href="style/style.css">
 <?php
+
 require __DIR__."/pdo.php";
 
 if(isset($_POST["submitUser"])) {
@@ -15,8 +17,10 @@ if(isset($_POST["submitUser"])) {
 ?>
 
 
+
+<?php include('navbar.php'); ?> 
 <body>
-    <form action="ajouter_utilisateur.php" method="post">
+    <form action="ajouter_utilisateur.php" method="post" class="addutilisateur">
         <p>
             <label for="nom">Nom</label>
             <input type="text" name="nom" id="nom">
@@ -44,4 +48,11 @@ if(isset($_POST["submitUser"])) {
         }
     }
     ?>
+
+
+<footer>
+    <p>&copy;AutoEnchères</p>
+</footer>
 </body>
+
+
