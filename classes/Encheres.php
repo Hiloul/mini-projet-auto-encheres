@@ -9,8 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-
-<?php include('navbar.php'); ?> 
+<a href="http://localhost/php/mini-projet-auto-encheres//index.php">Accueil</a>
   
 
 <h1>Enchères</h1>
