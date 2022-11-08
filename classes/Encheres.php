@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php 
 require __DIR__."/pdo.php";
 
@@ -61,6 +62,8 @@ foreach($annonce as $key => $value){?>
 
 
 
+=======
+>>>>>>> origin/olala
 
 <!DOCTYPE html>
 <html lang="en">
@@ -114,6 +117,9 @@ foreach($annonce as $key => $value){?>
 </html>
 =======
 </html>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/samir5
 >>>>>>> b7e1a9f54f4e34bebfa084b2b4ef28f16ff288d7
+=======
+>>>>>>> origin/olala
