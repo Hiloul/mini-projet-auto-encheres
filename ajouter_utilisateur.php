@@ -19,7 +19,7 @@ if(isset($_POST["submitUser"])) {
 
 
 <?php include('navbar.php'); ?> 
-<body>
+
     <form action="ajouter_utilisateur.php" method="post" >
         <p>
             <label for="nom">Nom</label>
@@ -53,6 +53,6 @@ if(isset($_POST["submitUser"])) {
 <footer>
     <p>&copy;AutoEnchères</p>
 </footer>
-</body>
+
 
 

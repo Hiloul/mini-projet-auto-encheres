@@ -3,7 +3,6 @@
 }
 * body {
   margin: 0;
-  height: 100vh;
 }
 
 nav {
@@ -89,5 +88,5 @@ form {
   align-items: center;
   flex-direction: column;
   height: 50vh;
-  background-color: aqua;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
