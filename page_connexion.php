@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style/style.css">
+<?php include('navbar.php'); ?> 
 <?php
 require __DIR__."/pdo.php";
 
@@ -30,8 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<?php include('navbar.php'); ?> 
+
 <?php if(!isset($loggedUser)): ?>
+    
+
 <form action="page_connexion.php" method="post">
     <?php if(isset($errorMessage)) : ?>
         <div class="alert alert-danger" role="alert">
@@ -57,6 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Bonjour <?php echo $loggedUser['email']; ?> et bienvenue sur le site !
     </div>
 <?php endif; ?>
+<footer>
+    <p>&copy;AutoEnchères</p>
+</footer>
 
 
 

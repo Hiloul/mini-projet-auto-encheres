@@ -3,7 +3,6 @@
 }
 * body {
   margin: 0;
-  height: 100vh;
 }
 
 nav {
@@ -81,4 +80,13 @@ footer {
 footer p {
   cursor: pointer;
   color: #FFF;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */

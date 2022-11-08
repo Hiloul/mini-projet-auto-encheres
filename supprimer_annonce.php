@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style/style.css">
 <?php 
     require __DIR__."/pdo.php";
 
@@ -14,3 +15,7 @@ $resultat = $query->execute();
 }   else{
     echo "erreur parametre id manquant dans l'url";
         }
+
+?>
+
+

@@ -23,6 +23,10 @@
 
     <h3><a href="http://localhost/php/mini-projet-auto-encheres/">Home</a></h3>
 
+
+    <footer>
+    <p>&copy;AutoEnchères</p>
+    </footer>
 </body>
 </html>
 

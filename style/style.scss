@@ -2,7 +2,7 @@
 *{box-sizing: border-box;
     body{
         margin:0;
-        height: 100vh;
+
     }
 }
 
@@ -74,6 +74,8 @@ background-color: aquamarine;}
 
 
 
+
+
 footer{
 
     display: flex;
@@ -87,4 +89,12 @@ footer{
         
     }
 }
+
+form{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    background-color: red;}
 
