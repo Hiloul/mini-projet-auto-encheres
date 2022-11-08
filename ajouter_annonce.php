@@ -2,12 +2,12 @@
 <?php
 require __DIR__."/pdo.php";
 
-$query2 = $pdo->prepare("SELECT * FROM `utilisateur`ORDER BY nom ASC");
+$query= $pdo->prepare("SELECT * FROM `utilisateur`ORDER BY nom ASC");
 
-$query2->execute();
+$query->execute();
 
-$utilisateur = $query2->fetchAll(PDO::FETCH_ASSOC);
-var_dump($utilisateur);
+$utilisateur = $query->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 if (isset($_POST["submitAnnonce"])) {
@@ -16,7 +16,7 @@ if (isset($_POST["submitAnnonce"])) {
     $result = $pdo->prepare("INSERT INTO annonces (model,marque,Couleur,annee,kilometrage,carburant,boitevitesse,prixdepart,description,datedebut,datefin,utilisateur_id) VALUES (:model,:marque,:Couleur,:annee,:kilometrage,:carburant,:boitevitesse,:prixdepart,:description,:datedebut,:datefin,:utilisateur_id)");
     $result->bindValue(":model", $_POST["model"], PDO::PARAM_STR);
     $result->bindValue(":marque", $_POST["marque"], PDO::PARAM_STR);
-    $result->bindValue(":annee", $_POST["annee"], PDO::PARAM_STR);
+    $result->bindValue(":annee", $_POST["annee"], PDO::PARAM_INT);
     $result->bindValue(":Couleur", $_POST["Couleur"], PDO::PARAM_STR);
     $result->bindValue(":kilometrage", $_POST["kilometrage"], PDO::PARAM_INT);
     $result->bindValue(":carburant", $_POST["carburant"], PDO::PARAM_STR);
@@ -25,7 +25,7 @@ if (isset($_POST["submitAnnonce"])) {
     $result->bindValue(":description", $_POST["description"], PDO::PARAM_STR);
     $result->bindValue(":datedebut", $_POST["datedebut"], PDO::PARAM_STR);
     $result->bindValue(":datefin", $_POST["datefin"], PDO::PARAM_STR);
-    $result->bindValue(":utilisateur_id", $_POST["utilisateur"], PDO::PARAM_STR);
+    $result->bindValue(":utilisateur_id", $_POST["utilisateur"], PDO::PARAM_INT);
     $annonces= $result->execute();
     var_dump($annonces);
     
@@ -92,7 +92,7 @@ if (isset($_POST["submitAnnonce"])) {
         <p>
             <label for="utiliateur">utilisateur</label>
             <select name="utilisateur" id="utilisateur">
-                <?php foreach ($annonces as $key => $value) { ?>
+                <?php foreach ($utilisateur as $key => $value) { ?>
                     <option value="<?= $value["id"] ?>"><?= $value["nom"] . " " . $value["prenom"] ?></option>
                 <?php } ?>
 
