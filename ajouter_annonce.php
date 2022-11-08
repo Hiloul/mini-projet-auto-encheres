@@ -34,7 +34,7 @@ if (isset($_POST["submitAnnonce"])) {
     
 ?>
 
-<body>
+<?php include('navbar.php'); ?> 
     <form action="ajouter_annonce.php" method="post">
         <p>
             <label for="model">model</label>
@@ -109,4 +109,7 @@ if (isset($_POST["submitAnnonce"])) {
             echo "erreur l'ors de l'ajout";
         }
     } ?>
-</body>
+    <footer>
+    <p>&copy;AutoEnchères</p>
+</footer>
+
