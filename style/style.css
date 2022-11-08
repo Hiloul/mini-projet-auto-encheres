@@ -1,5 +1,11 @@
 * {
   box-sizing: border-box;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Dancing Script", cursive;
 }
 * body {
   margin: 0;
@@ -32,6 +38,7 @@ form {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  margin: 0;
   background-color: red;
 }
 
@@ -42,20 +49,13 @@ form {
   background-color: red;
 }
 
-.listAuto {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: cadetblue;
-}
-
 #foreach {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-weight: 400;
-  height: 50vh;
+  height: 100vh;
   background-color: red;
 }
 #foreach section {
@@ -67,15 +67,19 @@ form {
   color: black;
 }
 
-.btn {
-  height: 50vh;
-  background-color: aquamarine;
-}
 .btn button {
   cursor: pointer;
   border-radius: 10px;
-  background-color: black;
+  border: none;
+  background: none;
   text-decoration: none;
+}
+.btn button a {
+  text-decoration: none;
+  color: white;
+}
+.btn button a:hover {
+  font-size: 1.5em;
   color: black;
 }
 
@@ -89,4 +93,17 @@ footer {
 footer p {
   cursor: pointer;
   color: #FFF;
+}
+
+input {
+  transform: translateY(-30%);
+}
+input input::-webkit-outer-spin-button,
+input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label {
+  transform: translateY(-30%);
 }/*# sourceMappingURL=style.css.map */

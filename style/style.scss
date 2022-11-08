@@ -1,9 +1,13 @@
 
 *{box-sizing: border-box;
+    outline: none;
+    user-select: none;
     body{
         margin:0;
 
     }
+    font-family: 'Dancing Script', cursive;
+
 }
 
 nav{
@@ -35,6 +39,8 @@ form{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    margin: 0;
+
     background-color: red;}
 
 .actusite{
@@ -45,13 +51,13 @@ form{
     // margin-bottom: 25px;
 
 }
-.listAuto{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: cadetblue;
-    // margin-top: 25px;
-}
+// .listAuto{
+//     display: flex;
+//     flex-direction: column;
+//     height: 100vh;
+//     background-color: cadetblue;
+//     // margin-top: 25px;
+// }
 
 #foreach{
     display: flex;
@@ -59,7 +65,7 @@ form{
     align-items: center;
     flex-direction: column;
     font-weight: 400;
-    height: 50vh;
+    height: 100vh;
     background-color: red;
     section{
         margin-top: 20px;
@@ -70,15 +76,22 @@ form{
     }
 }
 .btn{
-    height: 50vh;
+    
     button{
         cursor: pointer;
         border-radius: 10px;
-        background-color: black;
+        border: none;
+        background: none;
         text-decoration: none;
-        color: black;
+        
+        a{text-decoration: none;
+            color: white;
+        &:hover{
+            font-size: 1.5em;
+            color: black; 
+        }}
     }
-background-color: aquamarine;}
+}
 
 
 
@@ -99,3 +112,10 @@ footer{
 }
 
 
+input{transform: translateY(-30%);
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }}
+label{transform: translateY(-30%); }

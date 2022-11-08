@@ -20,13 +20,13 @@ foreach($annonce as $key => $value){?>
     echo $value['marque']." ".$value['model']." ".$value['annee'].'<section><a href="classes/Encheres.php?id='.$value["id"].'">Afficher</a> <a href="supprimer_annonce.php?id='.$value["id"].'">Supprimer</a><br></section>';
 }
 ?>
-</div>
-
-
-
 <div class="btn">
 <button><a href="ajouter_annonce.php">Deposer une annonce</a></button>
 </div>
+</div>
+
+
+
 
 <footer>
     <p>&copy;AutoEnchères</p>

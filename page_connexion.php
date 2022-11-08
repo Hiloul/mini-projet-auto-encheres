@@ -37,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
 <form action="page_connexion.php" method="post">
+<h1>Formulaire de connexion</h1>
     <?php if(isset($errorMessage)) : ?>
         <div class="alert alert-danger" role="alert">
             <?php echo $errorMessage; ?>

@@ -20,7 +20,8 @@ if(isset($_POST["submitUser"])) {
 
 <?php include('navbar.php'); ?> 
 
-    <form action="ajouter_utilisateur.php" method="post" >
+<form action="ajouter_utilisateur.php" method="post" >
+        <h1>Formulaire d'inscription</h1>
         <p>
             <label for="nom">Nom</label>
             <input type="text" name="nom" id="nom">

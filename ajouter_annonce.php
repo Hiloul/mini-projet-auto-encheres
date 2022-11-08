@@ -36,6 +36,7 @@ if (isset($_POST["submitAnnonce"])) {
 
 <?php include('navbar.php'); ?> 
     <form action="ajouter_annonce.php" method="post">
+        <h1>Deposer une annonce</h1>
         <p>
             <label for="model">model</label>
             <input type="text" name="model" id="model">
