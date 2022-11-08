@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="style/style.css">
 
-<h1>Fiche Détails</h1>
+
 
 <?php include('navbar.php'); ?> 
   
@@ -17,7 +17,7 @@ $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
 foreach($annonce as $key => $value){?>
 
 <div id="foreach">
-
+<h1>Fiche Détails</h1>
 <?php
     echo $value['marque']."   ".$value['model']."   ".$value['annee']
     ."   ".$value['couleur']."   ".$value['kilometrage']."   ".$value['carburant']

@@ -3,7 +3,10 @@
 
 require __DIR__."/pdo.php";
 
-if(isset($_POST["submitLog"])) {
+
+
+
+if(isset($_POST["email"], $_POST["password"])) {
     
 
     $query = $pdo->prepare("SELECT * FROM utilisateur");
@@ -21,21 +24,21 @@ if(isset($_POST["submitLog"])) {
 
 <?php include('navbar.php'); ?> 
 
-<form action="page_connexion.php" method="post" >
-        <h1>Formulaire de connexion</h1>
-        
+
+<form action="page_connexion.php" method="post">
         <p>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" id="email" name="email">
         </p>
         <p>
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password">
+            <input type="password" id="password" name="password">
         </p>
-        <input type="submit" value="Ajouter" name="submitLog">
+        <input type="submit" value="Se connecter">
+
     </form>
     <?php
-    if (isset($_POST["submitLog"])) {
+    if (isset($_POST["email"], $_POST["password"])) {
         if ($annonce) {
             header('Location: index.php');
         } else {
