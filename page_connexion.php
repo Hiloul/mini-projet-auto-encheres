@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-
+<?php include('navbar.php'); ?> 
 <?php if(!isset($loggedUser)): ?>
 <form action="page_connexion.php" method="post">
     <?php if(isset($errorMessage)) : ?>
