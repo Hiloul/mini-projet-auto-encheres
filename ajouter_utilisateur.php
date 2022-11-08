@@ -38,7 +38,7 @@ if(isset($_POST["submitUser"])) {
     <?php
     if (isset($_POST["submitUser"])) {
         if ($resultat) {
-            echo "Inscription validée";
+            header('Location: index.php');
         } else {
             echo "Erreur lors de l'ajout";
         }
