@@ -1,23 +1,30 @@
 <?php
 require __DIR__."/pdo.php";
 
-if (isset($_POST['email']) &&  isset($_POST['password'])) {
-    foreach ($users as $user) {
-        if ($user['email'] === $_POST['email'] && $user['password'] === $_POST['password']) {
-            $loggedUser = [
-                'email' => $user['email'],
-            ];
-            if($user){
+$error = false;
 
-                header('Location: index.php');
-            }
-        } else {
-            $errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identifier : (%s/%s)',
-                $_POST['email'],
-                $_POST['password']
-            );
-        }
+function connection($utilisateur, $email, $password) {
+    foreach ($utilisateur as $key => $value)
+    if ($utilisateur['email'] === $_POST['email'] && $utilisateur['password'] === $_POST['password']
+    ) {
+        return true;
+    } else {
+        return false;
     }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $result = connection($_POST["utilisateur"],$_POST["email"], $_POST["password"]);
+    var_dump($result);
+    if ($result) {
+        // rediriger vers page d'accueil
+        header("Location: index.php");
+        exit();
+    } else {
+        echo
+        $error = true;
+    }
+
 }
 
 ?>
@@ -25,7 +32,7 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
 
 
 <?php if(!isset($loggedUser)): ?>
-<form action="index.php" method="post">
+<form action="page_connexion.php" method="post">
     <?php if(isset($errorMessage)) : ?>
         <div class="alert alert-danger" role="alert">
             <?php echo $errorMessage; ?>
