@@ -1,3 +1,61 @@
+<?php 
+require __DIR__."/pdo.php";
+
+// $query= $pdo->prepare("SELECT * FROM `utilisateur`ORDER BY nom ASC");
+
+// $query->execute();
+
+// $utilisateur = $query->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+// if (isset($_POST["submitAnnonce"])) {
+
+
+//     $result = $pdo->prepare("INSERT INTO enchere (offre,date,utilisateur_id,annonce_id) VALUES (:offre,:date,:utilisateur_id,:annonce_id)");
+//     $result->bindValue(":offre", $_POST["model"], PDO::PARAM_STR);
+//     $result->bindValue(":date", $_POST["marque"], PDO::PARAM_STR);
+  
+//     $result->bindValue(":utilisateur_id", $_POST["utilisateur"], PDO::PARAM_INT);
+//     $annonces= $result->execute();
+//     var_dump($annonces);
+    
+// };
+
+
+$query = $pdo->prepare("SELECT * FROM enchere");
+$query->execute();
+//recupere les données converti dans un tableau associatif
+$annonce= $query->fetchALL(PDO::FETCH_ASSOC);
+// var_dump($annonce);
+
+foreach($annonce as $key => $value){?>
+
+<div id="foreach">
+
+<?php
+    echo $value['marque']." ".$value['model']." ".$value['annee'];
+}
+?>
+</div>
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!DOCTYPE html>
@@ -15,34 +73,37 @@
 
 <h1>Enchères</h1>
 
+<form action="Encheres.php" method="post">
+        <p>
+            <label for="offre">offre</label>
+            <input type="text" name="offre" id="offre">
+        </p>
+        <p>
+            <label for="date">date</label>
+            <input type="date" name="date" id="date">
+        </p>
 
+     
+        <p>
+            <label for="utiliateur">utilisateur</label>
+            <select name="utilisateur" id="utilisateur">
+                <?php foreach ($utilisateur as $key => $value) { ?>
+                    <option value="<?= $value["id"] ?>"><?= $value["nom"] . " " . $value["prenom"] ?></option>
+                <?php } ?>
 
+            </select>
+        </p>
 
-  <input type="submit" value="Déposer une enchère">
+        <input type="submit" value="ajouter" name="submitEncheres">
 
-
-  <section class="typevehicule">
-    <ul>
-        <li><h3>Marques</h3></li>
-        <li>Audi</li>
-        <li>Bmw</li>
-        <li>Citroen</li>
-        <li>Dacia</li>
-        <li>Ford</li>
-        <li>Honda</li>
-        <li>Jaguar</li>
-        <li>Kia</li>
-        <li>Mercedes</li>
-        <li>Nissan</li>
-        <li>Opel</li>
-        <li>Peugeot</li>
-        <li>Renault</li>
-        <li>Toyota</li>
-        <li>Volkswagen</li>
-    </ul>
-  </section>
-<h3><a href="http://localhost/php/mini-projet-auto-encheres/">Home</a></h3>
-
+    </form>
+    <?php if (isset($_POST["submitEncheres"])) {
+        if ($utilisateur) {
+            echo "aannonce ajouter";
+        } else {
+            echo "erreur l'ors de l'ajout";
+        }
+    } ?>
 
 </body>
 </html>
