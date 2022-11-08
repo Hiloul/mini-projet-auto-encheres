@@ -23,7 +23,7 @@ if (isset($_POST['email']) &&  isset($_POST['password'])) {
 ?>
 
 
-
+<?php include('navbar.php'); ?> 
 <?php if(!isset($loggedUser)): ?>
 <form action="index.php" method="post">
     <?php if(isset($errorMessage)) : ?>
