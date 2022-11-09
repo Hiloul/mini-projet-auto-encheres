@@ -3,6 +3,10 @@
 
 
 <?php include('navbar.php'); ?> 
+<?php include('navbar.php'); ?> 
+<?php include('classes/sessionOk.php'); ?> ?> 
+
+
   
 <?php
 require __DIR__."/pdo.php";

@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="style/style.css">
 <?php 
     require __DIR__."/pdo.php";
+    
 
     if(isset($_GET["id"])){
 $query = $pdo->prepare("DELETE FROM `annonces` WHERE id=:id");
