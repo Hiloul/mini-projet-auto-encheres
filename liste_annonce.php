@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="style/style.css">
 
 <?php include('navbar.php'); ?> 
-  
+
 <?php
 require __DIR__."/pdo.php";
 
