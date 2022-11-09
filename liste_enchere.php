@@ -7,15 +7,23 @@ $query->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query->execute();
 $annonce= $query->fetch(PDO::FETCH_ASSOC);
 ?>
-<?php
-    echo $annonce['model'];
-    echo $annonce['marque'];
-    echo $annonce['couleur'];
-    echo $annonce['annee'];
-    echo $annonce['kilometrage'];
-    echo $annonce['carburant'];
-    echo $annonce['boitevitesse'];
-    echo $annonce['prixdepart'];
-    echo $annonce['datedebut'];
-    echo $annonce['datefin'];
-?>
+
+
+<section class="bodysite">
+<div id="foreach">
+
+    <p> <?= $annonce['model']?> </p>
+    <p> <?= $annonce['marque']?> </p>
+    <p> <?= $annonce['couleur']?> </p>
+    <p> <?= $annonce['annee']?> </p>
+    <p> <?= $annonce['kilometrage']?> </p>
+    <p> <?= $annonce['carburant']?> </p>
+    <p> <?= $annonce['boitevitesse']?> </p>
+    <p> <?= $annonce['prixdepart']?> </p>
+    <p> <?= $annonce['datedebut']?> </p>
+    <p> <?= $annonce['datefin']?> </p>
+    <div class="btn">
+    <button><a href="ajouter_annonce.php">Deposer une annonce</a></button>
+    </div>
+</div>
+</section>
