@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="style/style.css">
 
+
+
 <?php include('navbar.php'); ?> 
   
 <?php
@@ -12,27 +14,27 @@ $query->execute();
 $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
 // var_dump($annonce);
 ?>
-<h1>Sommaire des annonces</h1>
+
+<h1>Fiche détails des véhicules</h1>
 
 <?php
 foreach($annonce as $key => $value){?>
 <section class="bodysite">
 <div id="foreach">
-
 <?php
-    echo $value['marque']." ".$value['model']." ".$value['annee'].'<section><a href="/php/mini-projet-auto-encheres/fiche_voiture.php?id='.$value["id"].'">Afficher</a> <a href="supprimer_annonce.php?id='.$value["id"].'">Supprimer</a><br></section>';
+    echo $value['marque']."   ".$value['model']."   ".$value['annee']
+    ."   ".$value['couleur']."   ".$value['kilometrage']."   ".$value['carburant']
+    ."   ".$value['boitevitesse']."   ".$value['prixdepart']
+    ."€  ".$value['datedebut']."   ".$value['datefin']."   ".$value['description'];
 }
 ?>
-<div class="btn">
-<button><a href="ajouter_annonce.php">Deposer une annonce</a></button>
-</div>
+
 
 </div>
 </section>
+
+
+
 <footer>
     <p>&copy;AutoEnchères</p>
 </footer>
-
-
-
-

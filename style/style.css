@@ -1,5 +1,12 @@
 * {
   box-sizing: border-box;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  scroll-behavior: smooth;
+  font-family: "Bangers", cursive;
 }
 * body {
   margin: 0;
@@ -10,20 +17,21 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   background-color: black;
-  height: 50px;
+  height: 100px;
 }
 nav a {
   cursor: pointer;
   text-decoration: none;
+  font-size: 2em;
   color: #FFF;
 }
 nav a:hover {
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: red;
 }
 nav img#logo {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
 }
 
 form {
@@ -31,32 +39,21 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
-  background-color: red;
+  margin: 0;
 }
 
 .actusite {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: red;
-}
-
-.listAuto {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: cadetblue;
 }
 
 #foreach {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 50px;
   font-weight: 400;
-  height: 50vh;
-  background-color: red;
 }
 #foreach section {
   margin-top: 20px;
@@ -67,16 +64,24 @@ form {
   color: black;
 }
 
-.btn {
-  height: 50vh;
-  background-color: aquamarine;
-}
 .btn button {
   cursor: pointer;
   border-radius: 10px;
-  background-color: black;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+.btn button a {
   text-decoration: none;
   color: black;
+}
+.btn button a:hover {
+  font-size: 1.5em;
+  color: red;
+}
+
+.bodysite {
+  height: 100vh;
 }
 
 footer {
@@ -85,8 +90,31 @@ footer {
   align-items: center;
   background-color: black;
   height: 50px;
+  width: 100%;
 }
 footer p {
   cursor: pointer;
   color: #FFF;
+}
+
+input {
+  border-radius: 10px;
+  padding: 2px;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+#accueil {
+  font-size: xx-large;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

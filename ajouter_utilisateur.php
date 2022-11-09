@@ -20,7 +20,9 @@ if(isset($_POST["submitUser"])) {
 
 <?php include('navbar.php'); ?> 
 
-    <form action="ajouter_utilisateur.php" method="post" >
+<section class="bodysite">
+<h1>Créer son profil</h1>
+<form action="ajouter_utilisateur.php" method="post" >
         <p>
             <label for="nom">Nom</label>
             <input type="text" name="nom" id="nom">
@@ -39,10 +41,11 @@ if(isset($_POST["submitUser"])) {
         </p>
         <input type="submit" value="Ajouter" name="submitUser">
     </form>
+    </section>
     <?php
     if (isset($_POST["submitUser"])) {
         if ($resultat) {
-            header('Location: index.php');
+            header('Location: page_connexion.php');
         } else {
             echo "Erreur lors de l'ajout";
         }

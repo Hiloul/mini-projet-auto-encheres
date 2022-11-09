@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php 
 require __DIR__."/pdo.php";
 
@@ -76,17 +77,22 @@ foreach($annonce as $key => $value){?>
 </head>
 <body>
 
+=======
+<link rel="stylesheet" href="style/style.css">
+ 
+<a href="http://localhost/php/mini-projet-auto-encheres//index.php">Accueil</a>
+>>>>>>> olala
   
 
 <h1>Enchères</h1>
 
 <form action="Encheres.php" method="post">
         <p>
-            <label for="offre">offre</label>
-            <input type="text" name="offre" id="offre">
+            <label for="offre">Offre proposée: </label>
+            <input type="number" name="offre" id="offre">
         </p>
         <p>
-            <label for="date">date</label>
+            <label for="date">Date de l'offre: </label>
             <input type="date" name="date" id="date">
         </p>
 
@@ -105,13 +111,14 @@ foreach($annonce as $key => $value){?>
 
     </form>
     <?php if (isset($_POST["submitEncheres"])) {
-        if ($utilisateur) {
+        if ($value) {
             echo "aannonce ajouter";
         } else {
-            echo "erreur l'ors de l'ajout";
+            echo "ERREUR !!!!!!";
         }
     } ?>
 
+<<<<<<< HEAD
 </body>
 <<<<<<< HEAD
 </html>
@@ -123,3 +130,10 @@ foreach($annonce as $key => $value){?>
 >>>>>>> b7e1a9f54f4e34bebfa084b2b4ef28f16ff288d7
 =======
 >>>>>>> origin/olala
+=======
+
+
+<footer>
+    <p>&copy;AutoEnchères</p>
+</footer>
+>>>>>>> olala
