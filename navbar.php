@@ -17,4 +17,5 @@
 <a href="liste_annonce.php">Annonces</a>
 <a href="ajouter_utilisateur.php">Inscription</a>
 <a href="page_connexion.php">Connexion</a>
+<a href="page_deco.php">Deconnexion</a>
 </nav>   
