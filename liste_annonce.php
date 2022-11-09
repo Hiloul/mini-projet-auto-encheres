@@ -20,7 +20,7 @@ foreach($annonce as $key => $value){?>
 <div id="foreach">
 
 <?php
-    echo $value['marque']." ".$value['model']." ".$value['annee'].'<section><a href="/php/mini-projet-auto-encheres/fiche_voiture.php?id='.$value["id"].'">Afficher</a> <a href="supprimer_annonce.php?id='.$value["id"].'">Supprimer</a><br></section>';
+    echo $value['marque']." ".$value['model']." ".$value['annee'].'<section><a href="/php/mini-projet-auto-encheres/fiche_voiture.php?id='.$value["id"].'">Afficher</a> <a href="supprimer_annonce.php?id='.$value["id"].'" onclick="return confirm(\'Are you sure?\')?true:false;">Supprimer</a><br></section>';
 }
 ?>
 <div class="btn">
