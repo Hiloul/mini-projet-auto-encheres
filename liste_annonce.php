@@ -13,10 +13,6 @@ $query = $pdo->prepare("SELECT * FROM annonces");
 $query->execute();
 //recupere les données converti dans un tableau associatif
 $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
-<<<<<<< HEAD
-=======
-
->>>>>>> HilelavecunH
 ?>
 <h1>Sommaire des annonces</h1>
 

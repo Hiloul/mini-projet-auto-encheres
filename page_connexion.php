@@ -16,16 +16,8 @@
         $utilisateur = $query->fetch(PDO::FETCH_ASSOC);
     var_dump($utilisateur);
     
-<<<<<<< HEAD
-
-    $query = $pdo->prepare("SELECT * FROM utilisateur");
-    $query->execute();
-    //recupere les données converti dans un tableau associatif
-    $annonce= $query->fetch(PDO::FETCH_ASSOC);
-=======
         if ($utilisateur) {
             $hash = $utilisateur['password'];
->>>>>>> HilelavecunH
     
             if (password_verify($_POST['password'] ,$hash)) {
                 echo "Mots de passe  valide";
