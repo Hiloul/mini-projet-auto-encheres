@@ -16,7 +16,11 @@ $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/HilelavecunH
+=======
+>>>>>>> HilelavecunH
+>>>>>>> 4342bae698b0e28ce04b154d2f5e0374741f4008
 ?>
 <h1>Sommaire des annonces</h1>
 

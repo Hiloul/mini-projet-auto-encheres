@@ -25,7 +25,11 @@
 =======
         if ($utilisateur) {
             $hash = $utilisateur['password'];
+<<<<<<< HEAD
 >>>>>>> origin/HilelavecunH
+=======
+>>>>>>> HilelavecunH
+>>>>>>> 4342bae698b0e28ce04b154d2f5e0374741f4008
     
             if (password_verify($_POST['password'] ,$hash)) {
                 echo "Mots de passe  valide";
