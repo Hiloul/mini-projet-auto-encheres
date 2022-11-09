@@ -9,6 +9,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="style/style.css">
     <title>Enchères Auto</title>
 </head>
@@ -19,11 +22,35 @@
 
 
 <section class="actusite">
-<h2>Dernières Actualités</h2>
-<p>Chaque visiteur devra pouvoir déposer une annonce de voiture en saisissant 
-    le prix de réserve (prix de départ des enchères), la date de de fin des 
-    enchères et les informations essentielles: modèle, marque, puissance, année, description, etc...
-</p>
+
+<h1>Les enchères du moment</h1>
+
+  
+<?php
+require __DIR__."/pdo.php";
+
+//Recuperer toutes les annonces
+$query = $pdo->prepare("SELECT * FROM annonces");
+$query->execute();
+//recupere les données converti dans un tableau associatif
+$annonce= $query->fetchALL(PDO::FETCH_ASSOC);
+
+foreach($annonce as $key => $value){?>
+
+<div id="foreach">
+<div id="accueil">
+<?php
+    echo $value['marque']." ".$value['model']." ".$value['annee']." ".$value['prixdepart'].'€';
+}
+?>
+</div>
+</div>
+
+
+
+
+
+
 </section>
 
 
@@ -31,7 +58,7 @@
 
 
 
-<section class="listAuto">
+<!-- <section class="listAuto">
 <h2>Véhicule en vente</h2>
 <h3>Liste des ventes visibles par les visiteurs</h3>
 <h3>Bonus: Filtrer vente en cours et terminée</h3>
@@ -45,7 +72,7 @@ Les utilisateurs connectés devront pouvoir accèder à un espace personnel pour
  </p>
 
 
-</section>
+</section> -->
 
 
 

@@ -1,31 +1,20 @@
 <link rel="stylesheet" href="style/style.css">
-<?php include('navbar.php'); ?> 
 <?php
+
 require __DIR__."/pdo.php";
 
-$error = false;
 
-function connection($utilisateur, $email, $password) {
-    foreach ($utilisateur as $key => $value)
-    if ($utilisateur['email'] === $_POST['email'] && $utilisateur['password'] === $_POST['password']
-    ) {
-        return true;
-    } else {
-        return false;
-    }
-}
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $result = connection($_POST["utilisateur"],$_POST["email"], $_POST["password"]);
-    var_dump($result);
-    if ($result) {
-        // rediriger vers page d'accueil
-        header("Location: index.php");
-        exit();
-    } else {
-        echo
-        $error = true;
-    }
+
+if(isset($_POST["email"], $_POST["password"])) {
+    
+
+    $query = $pdo->prepare("SELECT * FROM utilisateur");
+    $query->execute();
+    //recupere les données converti dans un tableau associatif
+    $annonce= $query->fetch(PDO::FETCH_ASSOC);
+    var_dump($annonce);
+    
 
 }
 
@@ -33,60 +22,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<?php if(!isset($loggedUser)): ?>
-    
+<?php include('navbar.php'); ?> 
 
+<section class="bodysite">
+    <h1>S'identifier</h1>
 <form action="page_connexion.php" method="post">
-    <?php if(isset($errorMessage)) : ?>
-        <div class="alert alert-danger" role="alert">
-            <?php echo $errorMessage; ?>
-        </div>
-    <?php endif; ?>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" aria-describedby="email-help" placeholder="Votre email...">
-        <div id="email-help" class="form-text"></div>
-    </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">Mot de passe</label>
-        <input type="password" class="form-control" id="password" name="password">
-    </div>
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-</form>
-<!-- 
-    Si utilisateur/trice bien connectée on affiche un message de succès
--->
-<?php else: ?>
-    <div class="alert alert-success" role="alert">
-        Bonjour <?php echo $loggedUser['email']; ?> et bienvenue sur le site !
-    </div>
-<?php endif; ?>
-<footer>
-    <p>&copy;AutoEnchères</p>
-</footer>
-
-
-
-
-
-
-
-
-
-<!-- <body>
-    <form action="page_connexion.php" method="post">
         <p>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" id="email" name="email">
         </p>
         <p>
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password">
+            <input type="password" id="password" name="password">
         </p>
-        <input type="submit" value="Se connecter" name="submitLog">
-    </form>
-</body> -->
+        <input type="submit" value="Se connecter">
 
+    </form>
+    </section>
+    <?php
+    if (isset($_POST["email"], $_POST["password"])) {
+        if ($annonce) {
+            header('Location: index.php');
+        } else {
+            echo "Erreur lors de l'ajout";
+        }
+    }
+    ?>
+
+
+<footer>
+    <p>&copy;AutoEnchères</p>
+</footer>
 
 
 
