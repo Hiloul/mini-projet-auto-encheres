@@ -1,7 +1,10 @@
 <link rel="stylesheet" href="style/style.css">
-<?php include('navbar.php'); ?> 
+<?php include('navbar.php'); ?>
+
+<?php include('classes/sessionOk.php'); ?> 
 <?php 
 require __DIR__."/pdo.php";
+
 $query = $pdo->prepare("SELECT * FROM `annonces` WHERE id = :id");
 $query->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query->execute();

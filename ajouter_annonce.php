@@ -27,14 +27,15 @@ if (isset($_POST["submitAnnonce"])) {
     $result->bindValue(":datefin", $_POST["datefin"], PDO::PARAM_STR);
     $result->bindValue(":utilisateur_id", $_POST["utilisateur"], PDO::PARAM_INT);
     $annonces= $result->execute();
-    var_dump($annonces);
+    
     
 };
 
     
 ?>
 
-<?php include('navbar.php'); ?> 
+
+<?php include ('classes/sessionOk.php'); ?> 
 <h1>Deposer une annonce</h1>
     <form action="ajouter_annonce.php" method="post">
         <p>

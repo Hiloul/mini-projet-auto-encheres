@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="style/style.css">
 
  
-<?php include('navbar.php'); ?> 
+<?php include ('navbar.php'); ?>
+<?php include  ('classes/sessionOk.php'); ?> 
+
 <section class="bodysite">
 <h1>Enchères</h1>
 
