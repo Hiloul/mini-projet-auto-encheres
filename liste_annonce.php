@@ -10,7 +10,7 @@ $query = $pdo->prepare("SELECT * FROM annonces");
 $query->execute();
 //recupere les données converti dans un tableau associatif
 $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
-// var_dump($annonce);
+var_dump($annonce);
 ?>
 <h1>Sommaire des annonces</h1>
 
@@ -20,7 +20,7 @@ foreach($annonce as $key => $value){?>
 <div id="foreach">
 
 <?php
-    echo $value['marque']." ".$value['model']." ".$value['annee'].'<section><a href="/php/mini-projet-auto-encheres/fiche_voiture.php?id='.$value["id"].'">Afficher</a> <a href="supprimer_annonce.php?id='.$value["id"].'" onclick="return confirm(\'Are you sure?\')?true:false;">Supprimer</a><br></section>';
+    echo $value['marque']." ".$value['model']." ".$value['annee'].'<section><a href="liste_enchere.php?id='.$value["id"].'">Afficher</a> <a href="supprimer_annonce.php?id='.$value["id"].'" onclick="return confirm(\'Are you sure?\')?true:false;">Supprimer</a><br></section>';
 }
 ?>
 <div class="btn">
