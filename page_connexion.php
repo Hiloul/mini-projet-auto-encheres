@@ -13,7 +13,6 @@ if(isset($_POST["email"], $_POST["password"])) {
     $query->execute();
     //recupere les données converti dans un tableau associatif
     $annonce= $query->fetch(PDO::FETCH_ASSOC);
-    var_dump($annonce);
     
 
 }
