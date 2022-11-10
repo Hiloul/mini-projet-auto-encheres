@@ -19,10 +19,11 @@ if(isset($_POST["submitEncheres"])) {
 //requête poure recup offre query 2SELECT * FROM `enchere` SELECT * FROM `enchere` 
 
 
-$query2 = $pdo->prepare("SELECT * FROM `annonces` JOIN utilisateur ON utilisateur.id=enchere.utilisateur_id WHERE annonce_id = :id");
+$query2 = $pdo->prepare("SELECT * FROM `enchere` JOIN utilisateur ON utilisateur.id=enchere.utilisateur_id WHERE annonce_id = :id");
 $query2->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query2->execute();
 $annonce2= $query2->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 
