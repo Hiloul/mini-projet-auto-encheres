@@ -22,8 +22,7 @@ if(isset($_POST["submitEncheres"])) {
 $query2 = $pdo->prepare("SELECT * FROM `enchere` JOIN utilisateur ON utilisateur.id=enchere.utilisateur_id WHERE annonce_id = :id");
 $query2->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query2->execute();
-$annonce2= $query2->fetchAll(PDO::FETCH_ASSOC);
-
+$enchere= $query2->fetchAll(PDO::FETCH_ASSOC);
 
 
 
@@ -66,6 +65,8 @@ $annonce= $query->fetch(PDO::FETCH_ASSOC);
         <input type="submit" value="ajouter" name="submitEncheres">
 
     </form>
+
+
    <?php } else {
 
     echo 'Veuillez vous connecter';
@@ -74,4 +75,11 @@ $annonce= $query->fetch(PDO::FETCH_ASSOC);
    ?>
     </div>
 </div>
+
+ <?php foreach ($enchere as $key => $value) {
+    
+   echo $value["offre"].$value["date"].$value["prenom"];
+
+} ?>
+
 </section>
