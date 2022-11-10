@@ -8,7 +8,7 @@ require __DIR__."/pdo.php";
 // var_dump($_SESSION);
 if(isset($_POST["submitEncheres"])) {
 
-    //
+    //$query3= $pdo->prepare();
 
 $query3 = $pdo->prepare ("SELECT MAX(offre) as max FROM enchere JOIN utilisateur ON enchere.utilisateur_id = utilisateur.id WHERE annonce_id = :id") ;
 $query3->bindValue(":id",$_GET["id"],PDO::PARAM_INT);
@@ -37,7 +37,7 @@ $query2 = $pdo->prepare("SELECT * FROM `enchere` JOIN utilisateur ON utilisateur
 $query2->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query2->execute();
 $enchere= $query2->fetchAll(PDO::FETCH_ASSOC);
-var_dump($enchere);
+// var_dump($enchere);
 
 
 $query = $pdo->prepare("SELECT * FROM `annonces` WHERE id = :id");
