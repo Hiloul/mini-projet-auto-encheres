@@ -39,7 +39,7 @@ $annonce= $query->fetch(PDO::FETCH_ASSOC);
 
     <p> <?= $annonce['model']?> </p>
     <p> <?= $annonce['marque']?> </p>
-    <p> <?= $annonce['couleur']?> </p>
+    <p> <?= $annonce['Couleur']?> </p>
     <p> <?= $annonce['annee']?> </p>
     <p> <?= $annonce['kilometrage']?> </p>
     <p> <?= $annonce['carburant']?> </p>
