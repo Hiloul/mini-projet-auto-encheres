@@ -77,20 +77,39 @@ nav img#logo {
   color: black;
 }
 
-.btn button {
+#foreach2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: xx-large;
+}
+#foreach2 a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: x-large;
+}
+#foreach2 a:hover {
+  font-weight: 600;
+  font-size: xx-large;
+}
+#foreach2 .btn button {
   cursor: pointer;
   border-radius: 10px;
   border: none;
   background: none;
   text-decoration: none;
+  margin-top: 10px;
 }
-.btn button a {
+#foreach2 .btn button a {
   text-decoration: none;
-  color: black;
+  font-size: x-large;
+  color: #f2f2f2;
 }
-.btn button a:hover {
-  font-size: 1.5em;
-  color: red;
+#foreach2 .btn button a:hover {
+  font-weight: 600;
+  font-size: xx-large;
 }
 
 .bodysite {

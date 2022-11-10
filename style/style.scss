@@ -92,24 +92,42 @@ nav{
             color: black;}
     }
 }
-.btn{
-    
-    button{
-        cursor: pointer;
-        border-radius: 10px;
-        border: none;
-        background: none;
+
+
+#foreach2{display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    font-weight: 400;
+    font-size: xx-large;
+    a{
         text-decoration: none;
-        
-        a{text-decoration: none;
-            color: black;
+        color: #f2f2f2;
+        font-size: x-large;
         &:hover{
-            font-size: 1.5em;
-            color: red; 
-        }}
+            font-weight: 600;
+            font-size: xx-large;
+        }
+    }
+    .btn{
+        button{
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            background: none;
+            text-decoration: none;
+            margin-top: 10px;
+            
+            a{text-decoration: none;
+                font-size: x-large;
+                color:#f2f2f2;
+            &:hover{
+                font-weight: 600;
+                font-size: xx-large;
+            }}
+        }
     }
 }
-
 
 .bodysite{
     

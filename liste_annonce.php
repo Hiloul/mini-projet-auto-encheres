@@ -15,15 +15,16 @@ $query->execute();
 $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
 
 ?>
-
+<section class="bodysite">
 <h1>Sommaire des annonces</h1>
 <?php
 foreach($annonce as $key => $value){?>
-<section class="bodysite">
-<div id="foreach">
+
+<div id="foreach2">
 
 <?php
-    echo $value['marque']." ".$value['model']." ".$value['annee'].'<section><a href="liste_enchere.php?id='.$value["id"].'">Afficher</a> <a href="supprimer_annonce.php?id='.$value["id"].'" onclick="return confirm(\'Are you sure?\')?true:false;">Supprimer</a><br></section>';
+    echo $value['marque']." ".$value['model']." ".$value['annee'].'<section class="listeConcat"><a href="liste_enchere.php?id='.$value["id"].'">Afficher</a>    
+     <a href="supprimer_annonce.php?id='.$value["id"].'" onclick="return confirm(\'Etes vous sur de vouloir supprimer cette annonce ?\')?true:false;">Supprimer</a><br></section>';
 }
 ?>
 <div class="btn">
@@ -31,7 +32,12 @@ foreach($annonce as $key => $value){?>
 </div>
 
 </div>
+
+
+
 </section>
+
+
 <footer>
     <p>&copy;AutoEnchères</p>
 </footer>
