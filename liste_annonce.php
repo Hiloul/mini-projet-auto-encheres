@@ -15,8 +15,8 @@ $query->execute();
 $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
 
 ?>
-<h1>Sommaire des annonces</h1>
 
+<h1>Sommaire des annonces</h1>
 <?php
 foreach($annonce as $key => $value){?>
 <section class="bodysite">

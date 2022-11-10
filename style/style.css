@@ -18,6 +18,7 @@ nav {
   align-items: center;
   background-color: black;
   height: 100px;
+  font-family: "Bangers", cursive;
 }
 nav a {
   cursor: pointer;
@@ -46,6 +47,19 @@ form {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin: 20px;
+  padding: 20px;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  overflow: hidden;
+  color: #FFF;
+  background: linear-gradient(black, red, black);
+}
+.actusite:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
 }
 
 #foreach {
@@ -82,6 +96,19 @@ form {
 
 .bodysite {
   height: 100vh;
+  margin: 20px;
+  padding: 20px;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  overflow: hidden;
+  color: #FFF;
+  background: linear-gradient(black, red, black);
+}
+.bodysite:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
 }
 
 footer {
@@ -117,4 +144,91 @@ h1 {
 #accueil {
   font-size: xx-large;
   font-weight: 600;
+}
+
+.cardenchere {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  overflow: hidden;
+  background: radial-gradient(#76b2fe, #b69efe);
+}
+.cardenchere:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 600px;
+  background: #f2f2f2;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  text-align: justify;
+  color: black;
+  padding: 40px;
+  font-family: "Merriweather", serif;
+}
+
+h1 {
+  font-weight: 900;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+.flap {
+  width: 100%;
+  height: 100%;
+}
+
+.flap::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  background: black;
+  background-position: 100px;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.flap::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  right: 0;
+  background: black;
+  background-position: -200px;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.container:hover .flap::after {
+  transform: translatex(300px);
+}
+
+.container:hover .flap::before {
+  transform: translatex(-300px);
 }/*# sourceMappingURL=style.css.map */

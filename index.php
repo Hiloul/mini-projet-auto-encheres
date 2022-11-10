@@ -22,9 +22,11 @@
 
 
 
-<section class="actusite">
 
-<h1>Les enchères du moment</h1>
+
+<section class="actusite">
+    
+    <h1>Les enchères du moment</h1>
 
   
 <?php
@@ -53,31 +55,6 @@ foreach($annonce as $key => $value){?>
 
 
 </section>
-
-
-
-
-
-
-<!-- <section class="listAuto">
-<h2>Véhicule en vente</h2>
-<h3>Liste des ventes visibles par les visiteurs</h3>
-<h3>Bonus: Filtrer vente en cours et terminée</h3>
-
-<h2>Bonus</h2>
-<p>
-
-Pouvoir filtrer sur la page principale, les enchère en cours ou les enchères terminées.
-Les utilisateurs connectés devront pouvoir accèder à un espace personnel pour consulter les enchères remportées.
-Les utilisateurs connectés devront pouvoir accèder à un espace personnel pour modifier leur profil (nom, prénom, email, mot de passe).
- </p>
-
-
-</section> -->
-
-
-
-
 
 
 

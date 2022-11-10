@@ -108,11 +108,17 @@ $annonce= $query->fetch(PDO::FETCH_ASSOC);
     </div>
 </div>
 
+<div class="cardenchere">
  <?php foreach ($enchere as $key => $value) {
     
    echo $value["offre"]."<br>".$value["date"]." ".$value["prenom"];
 
 } ?>
-
+</div>
 </section>
+
+
+<footer>
+    <p>&copy;AutoEnchères</p>
+</footer>
 

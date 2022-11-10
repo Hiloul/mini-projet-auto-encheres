@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="style/style.css">
 <?php
 require __DIR__."/pdo.php";
+ include ('navbar.php'); 
 
 $query= $pdo->prepare("SELECT * FROM `utilisateur`ORDER BY nom ASC");
 
@@ -38,6 +39,12 @@ if (isset($_POST["submitAnnonce"])) {
 
 
 <?php include ('classes/sessionOk.php'); ?> 
+
+
+<div class="container">
+  <div class="content">
+    
+ 
 <h1>Deposer une annonce</h1>
     <form action="ajouter_annonce.php" method="post">
         <p>
@@ -106,15 +113,23 @@ if (isset($_POST["submitAnnonce"])) {
         <input type="submit" value="ajouter" name="submitAnnonce">
 
     </form>
+    </div>
+  <div class="flap"></div>
+</div>
+
+<footer>
+<p>&copy;AutoEnchères</p>
+</footer>
+
     <?php if (isset($_POST["submitAnnonce"])) {
         if ($utilisateur) {
             header('Location: index.php');
 
         } else {
             echo "Erreur lors de l'ajout";
-        }
-    } ?>
-    <footer>
-    <p>&copy;AutoEnchères</p>
-</footer>
+        }    
+    } ?>        
+
+
+
 
