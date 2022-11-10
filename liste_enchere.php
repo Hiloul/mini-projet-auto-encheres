@@ -37,12 +37,25 @@ $query2 = $pdo->prepare("SELECT * FROM `enchere` JOIN utilisateur ON utilisateur
 $query2->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query2->execute();
 $enchere= $query2->fetchAll(PDO::FETCH_ASSOC);
+var_dump($enchere);
 
 
 $query = $pdo->prepare("SELECT * FROM `annonces` WHERE id = :id");
 $query->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query->execute();
 $annonce= $query->fetch(PDO::FETCH_ASSOC);
+<<<<<<< HEAD
+=======
+
+
+$query = $pdo->prepare("SELECT * FROM `annonces` WHERE id = :id");
+$query->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
+$query->execute();
+$annonce= $query->fetch(PDO::FETCH_ASSOC);
+
+
+?>
+>>>>>>> 91d656db4cc639d224655977631d3f08a9b09db9
 
 // $query3 = $pdo->prepare ("SELECT MAX(prix-propose) FROM enchereJOIN utilisateur ON enchere.utilisateur_id = utilisateur.id WHERE annonce_id = :id") ;
 // $gagnant = $query3->bindValue(":id",$_GET["id"],PDO::PARAM_INT);
