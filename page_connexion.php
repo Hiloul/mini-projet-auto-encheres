@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="style/style.css">
 <?php
-
+ require __DIR__."/pdo.php";
  
  include('classes/sessionOk.php'); 
 
@@ -22,7 +22,7 @@
     
             if (password_verify($_POST['password'] ,$hash)) {
                 echo "Mots de passe  valide";
-                $_SESSION["id_utilisatateur"] = $utilisateur["id"];
+                $_SESSION["id_utilisateur"] = $utilisateur["id"];
                 $_SESSION["email_utilisateur"] = $utilisateur["email"];
     
     
