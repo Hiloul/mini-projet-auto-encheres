@@ -12,10 +12,10 @@
             <label for="offre">Offre proposée: </label>
             <input type="number" name="offre" id="offre">
         </p>
-        <p>
+        <!-- <p>
             <label for="date">Date de l'offre: </label>
             <input type="date" name="date" id="date">
-        </p>
+        </p> -->
 
      
         <p>
