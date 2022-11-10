@@ -35,12 +35,11 @@ nav img#logo {
   width: 200px;
 }
 
-form {
+.formPareil {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0;
 }
 
 .actusite {
@@ -180,12 +179,6 @@ h1 {
 
 .content {
   position: absolute;
-  top: 50%;
-  transform: translatey(-50%);
-  text-align: justify;
-  color: black;
-  padding: 40px;
-  font-family: "Merriweather", serif;
 }
 
 h1 {

@@ -43,10 +43,8 @@ if (isset($_POST["submitAnnonce"])) {
 
 <div class="container">
   <div class="content">
-    
- 
 <h1>Deposer une annonce</h1>
-    <form action="ajouter_annonce.php" method="post">
+    <form action="ajouter_annonce.php" method="post" id="formAnnonce">
         <p>
             <label for="model">Model: </label>
             <input type="text" name="model" id="model">

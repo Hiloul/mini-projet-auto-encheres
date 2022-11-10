@@ -20,7 +20,7 @@ if(isset($_POST["submitUser"])) {
 
 <section class="bodysite">
 <h1>Créer son profil</h1>
-<form action="ajouter_utilisateur.php" method="post" >
+<form action="ajouter_utilisateur.php" method="post" class="formPareil" >
         <p>
             <label for="nom">Nom</label>
             <input type="text" name="nom" id="nom">

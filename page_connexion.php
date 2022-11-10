@@ -43,7 +43,7 @@
 
 <section class="bodysite">
     <h1>S'identifier</h1>
-<form action="page_connexion.php" method="post">
+<form action="page_connexion.php" method="post" class="formPareil">
         <p>
             <label for="email">Email</label>
             <input type="email" id="email" name="email">
