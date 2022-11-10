@@ -13,17 +13,7 @@ $query = $pdo->prepare("SELECT * FROM annonces");
 $query->execute();
 //recupere les données converti dans un tableau associatif
 $annonce= $query->fetchALL(PDO::FETCH_ASSOC);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/HilelavecunH
-=======
->>>>>>> HilelavecunH
->>>>>>> 4342bae698b0e28ce04b154d2f5e0374741f4008
-=======
->>>>>>> 92e9bce3b3eddf3c7cfa371c8b1119e5f9810b66
 ?>
 <h1>Sommaire des annonces</h1>
 
