@@ -27,6 +27,8 @@ if (isset($_POST["submitAnnonce"])) {
     $result->bindValue(":datefin", $_POST["datefin"], PDO::PARAM_STR);
     $result->bindValue(":utilisateur_id", $_POST["utilisateur"], PDO::PARAM_INT);
     $annonces= $result->execute();
+
+    
     
     
 };
@@ -106,9 +108,10 @@ if (isset($_POST["submitAnnonce"])) {
     </form>
     <?php if (isset($_POST["submitAnnonce"])) {
         if ($utilisateur) {
-            echo "aannonce ajouter";
+            header('Location: index.php');
+
         } else {
-            echo "erreur l'ors de l'ajout";
+            echo "Erreur lors de l'ajout";
         }
     } ?>
     <footer>

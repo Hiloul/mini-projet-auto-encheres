@@ -23,6 +23,7 @@ $query2 = $pdo->prepare("SELECT * FROM `enchere` JOIN utilisateur ON utilisateur
 $query2->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query2->execute();
 $enchere= $query2->fetchAll(PDO::FETCH_ASSOC);
+var_dump($enchere);
 
 
 
@@ -30,6 +31,14 @@ $query = $pdo->prepare("SELECT * FROM `annonces` WHERE id = :id");
 $query->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
 $query->execute();
 $annonce= $query->fetch(PDO::FETCH_ASSOC);
+
+
+$query = $pdo->prepare("SELECT * FROM `annonces` WHERE id = :id");
+$query->bindValue(':id', $_GET["id"],PDO::PARAM_INT);
+$query->execute();
+$annonce= $query->fetch(PDO::FETCH_ASSOC);
+
+
 ?>
 
 
