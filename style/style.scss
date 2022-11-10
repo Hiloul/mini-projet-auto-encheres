@@ -79,10 +79,7 @@ nav{
 }
 
 #foreach{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
+   text-align: center;
     font-weight: 400;
     section{
         margin-top: 20px;
@@ -116,19 +113,21 @@ nav{
             border: none;
             background: none;
             text-decoration: none;
-            margin-top: 10px;
+            margin-top: 50px;
             
             a{text-decoration: none;
                 font-size: x-large;
                 color:#f2f2f2;
+                font-family: 'Bangers', cursive;
             &:hover{
-                font-weight: 600;
+                
                 font-size: xx-large;
             }}
         }
     }
 }
 
+.btn{font-size: xx-large;}
 .bodysite{
     
     height: 100vh;
@@ -196,6 +195,7 @@ input{
 
 
 h1{
+    margin: 0;
     text-align: center;
     font-size: xxx-large;}
 
@@ -205,17 +205,15 @@ h1{
 }
 
 .cardenchere{
-    margin: 20px;
     padding: 20px;
-    width: 500px;
-    min-height: 200px;
     display: grid;
+    text-align: center;
     grid-template-rows: 20px 50px 1fr 50px;
     border-radius: 10px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
     transition: all 0.2s;
     overflow: hidden;
-    background: radial-gradient(#76b2fe, #b69efe);
+    background: radial-gradient(red, black);
     &:hover{
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);

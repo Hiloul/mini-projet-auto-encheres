@@ -41,9 +41,11 @@ if (isset($_POST["submitAnnonce"])) {
 <?php include ('classes/sessionOk.php'); ?> 
 
 
+
+<section class="bodysite">
+<h1>Deposer une annonce</h1>
 <div class="container">
   <div class="content">
-<h1>Deposer une annonce</h1>
     <form action="ajouter_annonce.php" method="post" id="formAnnonce">
         <p>
             <label for="model">Model: </label>
@@ -114,7 +116,7 @@ if (isset($_POST["submitAnnonce"])) {
     </div>
   <div class="flap"></div>
 </div>
-
+</section>
 <footer>
 <p>&copy;AutoEnchères</p>
 </footer>

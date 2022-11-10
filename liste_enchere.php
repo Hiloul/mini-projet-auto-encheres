@@ -64,6 +64,7 @@ $annonce= $query->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <section class="bodysite">
+    <h1>Fiche technique</h1>
 <div id="foreach">
 
     <p> <?= $annonce['model']?> </p>
