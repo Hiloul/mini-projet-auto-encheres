@@ -28,7 +28,7 @@
             </select>
         </p>
 
-        <input type="submit" value="ajouter" name="submitEncheres">
+        <input type="submit" value="ajouter" name="submitEncheres" class="subBtn">
 
     </form>
     <?php if (isset($_POST["submitEncheres"])) {

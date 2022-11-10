@@ -92,7 +92,7 @@ $annonce= $query->fetch(PDO::FETCH_ASSOC);
 
      
 
-        <input type="submit" value="ajouter" name="submitEncheres">
+        <input type="submit" value="ajouter" name="submitEncheres" class="subBtn">
 
     </form>
 

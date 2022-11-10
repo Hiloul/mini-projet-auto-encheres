@@ -108,7 +108,7 @@ if (isset($_POST["submitAnnonce"])) {
             </select>
         </p>
 
-        <input type="submit" value="ajouter" name="submitAnnonce">
+        <input type="submit" value="ajouter" name="submitAnnonce" class="subBtn">
 
     </form>
     </div>

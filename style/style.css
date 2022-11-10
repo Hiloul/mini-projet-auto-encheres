@@ -155,9 +155,23 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.subBtn {
+  background-color: black;
+  color: #f2f2f2;
+  border: none;
+  padding: 10px;
+  font-size: larger;
+  font-family: "Bangers", cursive;
+}
+.subBtn:hover {
+  color: red;
+  border: none;
+  font-size: x-large;
+}
+
 h1 {
   text-align: center;
-  font-size: xx-large;
+  font-size: xxx-large;
 }
 
 #accueil {

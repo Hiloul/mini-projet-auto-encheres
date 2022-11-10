@@ -52,7 +52,7 @@
             <label for="password">Mot de passe</label>
             <input type="password" id="password" name="password">
         </p>
-        <input type="submit" value="Se connecter" name="submitConnexion">
+        <input type="submit" value="Connexion" name="submitConnexion" class="subBtn">
 
     </form>
     </section>

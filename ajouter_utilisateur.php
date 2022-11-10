@@ -37,7 +37,7 @@ if(isset($_POST["submitUser"])) {
             <label for="password">Mot de passe</label>
             <input type="password" name="password" id="password">
         </p>
-        <input type="submit" value="Ajouter" name="submitUser">
+        <input type="submit" value="Inscription" name="submitUser" class="subBtn">
     </form>
     </section>
     <?php
