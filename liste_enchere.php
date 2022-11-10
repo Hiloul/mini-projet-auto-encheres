@@ -26,7 +26,7 @@ $annonce= $query->fetch(PDO::FETCH_ASSOC);
     <p> <?= $annonce['datedebut']?> </p>
     <p> <?= $annonce['datefin']?> </p>
     <div class="btn">
-    <button><a href="ajouter_annonce.php">Deposer une annonce</a></button>
+    <button><a href="ajouter_offre.php">Faire un offre</a></button>
     </div>
 </div>
 </section>

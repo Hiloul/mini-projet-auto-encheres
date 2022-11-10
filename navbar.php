@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="style/style.css">
 <nav>
 <a href="index.php"><img src="img/logo1.png" id="logo" alt=""></a>
-<a href="ajouter_offre.php">Enchères</a>
+<!-- <a href="ajouter_offre.php">Enchères</a> -->
 <a href="liste_annonce.php">Annonces</a>
 <a href="ajouter_utilisateur.php">Inscription</a>
 <a href="page_connexion.php">Connexion</a>
