@@ -4,13 +4,22 @@
 <?php include('classes/sessionOk.php'); ?> 
 <?php 
 require __DIR__."/pdo.php";
-
+function Gagnant($pdo){
+    $query3 = $pdo->prepare ("SELECT MAX(offre) as max  
+    FROM enchere 
+    JOIN utilisateur 
+    ON enchere.utilisateur_id = utilisateur.id 
+    WHERE annonce_id = :id") ;
+    
+    $query3->bindValue(":id",$_GET["id"],PDO::PARAM_INT);
+    $query3->execute();
+    $gagnant= $query3->fetch(PDO::FETCH_ASSOC);}
 // var_dump($_SESSION);
 if(isset($_POST["submitEncheres"])) {
 
     //$query3= $pdo->prepare();
 
-$query3 = $pdo->prepare ("SELECT MAX(offre) as max FROM enchere JOIN utilisateur ON enchere.utilisateur_id = utilisateur.id WHERE annonce_id = :id") ;
+$query3 = $pdo->prepare ("SELECT MAX(offre) as max  FROM enchere JOIN utilisateur ON enchere.utilisateur_id = utilisateur.id WHERE annonce_id = :id") ;
 $query3->bindValue(":id",$_GET["id"],PDO::PARAM_INT);
 $query3->execute();
 $gagnant= $query3->fetch(PDO::FETCH_ASSOC);
@@ -87,7 +96,7 @@ $annonce= $query->fetch(PDO::FETCH_ASSOC);
 
    <?php } elseif($annonce['datefin'] < date("Y-m-d")){
     
-    echo 'Enchère terminé, le gagnant est l\'utilisateur numéro '.$_SESSION['id_utilisateur'];
+    echo 'Enchère terminé, le gagnant est l\'utilisateur numéro '.Gagnant($pdo);
     }else{
         echo 'Veuillez vous connecter';
     }
