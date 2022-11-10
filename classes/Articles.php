@@ -1,4 +1,10 @@
 
+ $query = $pdo->prepare("INSERT INTO `utilisateur` (`nom`, `prenom`, `email`, `password`) VALUES (:nom, :prenom, :email, :password)");
+    $query->bindValue(':nom', $_POST["nom"],PDO::PARAM_STR);
+    $query->bindValue(':prenom', $_POST["prenom"],PDO::PARAM_STR);
+    $query->bindValue(':email', $_POST["email"],PDO::PARAM_STR);
+    $query->bindValue(':password', password_hash($_POST["password"], PASSWORD_DEFAULT),PDO::PARAM_STR);
+    $resultat= $query->execute();
 
 
 
