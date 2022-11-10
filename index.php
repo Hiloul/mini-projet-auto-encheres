@@ -21,9 +21,6 @@
 <?php include('classes/sessionOk.php'); ?>
 
 
-
-
-
 <section class="actusite">
     
     <h1>Les enchères du moment</h1>
